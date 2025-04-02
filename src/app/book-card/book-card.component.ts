@@ -4,7 +4,7 @@ import { Book } from '../book';
 
 @Component({
   selector: 'app-book-card',
-  imports: [],
+  imports: [CommonModule],
   templateUrl: './book-card.component.html',
   styleUrl: './book-card.component.scss'
 })
