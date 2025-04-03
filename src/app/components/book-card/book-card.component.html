@@ -1,4 +1,14 @@
+<a [routerLink]="['/details', bookElement.id]" class="book-card">
+    <div class="cover-container">
+        <img class="book-img" src="{{bookElement['image/jpeg']}}" alt="{{bookElement.title}}" loading="lazy">
+    </div>
+    <div class="book-info">
+        <h2 class="book-title">
+            {{bookElement.title}}
+        </h2>
+    </div>
+</a>
 
-<img src="{{bookElement['image/jpeg']}}" alt="{{bookElement.title}}">
-<h1>{{bookElement.title}}</h1>
-<h3>{{bookElement.authors[0].name}}</h3>
+
+
+

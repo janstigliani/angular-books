@@ -218,7 +218,10 @@ export class BookShelfingService {
     return this.booksArray.find((book) => book.id === id);
   }
 
-  submitApplication() {    
-    console.log(`submitted`,);  
+  submitApplication(title: string, imagejpeg: string, summaries: string[]) {    
+
+    const id = Math.max(...this.booksArray.map(o => o.id))+1;
+    const newBook: Book = {id, title, ["image/jpeg"]: imagejpeg, summaries};
+    this.booksArray.push(newBook);
   }
 }

@@ -1,1 +1,9 @@
-<p>details works!</p>
+<div class="cover-container">
+    <img class="book-img" src="{{bookElement!['image/jpeg']}}" alt="{{bookElement!.title}}" loading="lazy">
+</div>
+<div class="book-info">
+    <h2 class="book-title">
+        {{bookElement!.title}}
+    </h2>
+    <p>{{bookElement!.summaries[0]}}</p>
+</div>

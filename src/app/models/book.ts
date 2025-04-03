@@ -1,9 +1,9 @@
 export interface Book {
     id: number,
     title: string,
-    authors: Authors[],
+    authors?: Authors[],
     summaries: string []
-    subjects: string[],
+    subjects?: string[],
     "image/jpeg": string
 }
 

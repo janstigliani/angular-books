@@ -1,12 +1,13 @@
 <section>
     <form>        
-        <input type="text" placeholder="Filter by book-id" />        
-        <button class="primary" type="button">Search</button>     
+        <input type="text" placeholder="Filter by book title" #filter/>        
+        <button class="primary" type="button" (click)="filterResults(filter.value)">Search</button>     
     </form>
 </section>
 
 <section class="results">      
     <app-book-card
-    *ngFor= "let book of booksArray"
-    [bookElement]="book"></app-book-card>    
+        *ngFor= "let book of filteredBookList"
+        [bookElement]="book">
+    </app-book-card>    
 </section>
