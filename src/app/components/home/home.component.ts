@@ -1,8 +1,8 @@
 import { Component, inject } from '@angular/core';
 import { BookCardComponent } from '../book-card/book-card.component';
-import { Book } from '../book';
-import { BookShelfingService } from '../book-shelfing.service';
 import { CommonModule } from '@angular/common';
+import { BookShelfingService } from '../../services/book-shelfing.service';
+import { Book } from '../../models/book';
 
 @Component({
   selector: 'app-home',

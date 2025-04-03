@@ -1,0 +1,15 @@
+
+.content{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 3rem;
+}
+
+.logo-container {
+    display: flex;
+    justify-content: center;
+}
+
+.logo-container img {
+    max-width: 400px;
+}

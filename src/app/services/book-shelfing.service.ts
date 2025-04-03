@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { Book } from './book';
+import { Book } from '../models/book';
 
 @Injectable({
   providedIn: 'root'
@@ -216,5 +216,9 @@ export class BookShelfingService {
 
   getBookById(id: number): Book | undefined {
     return this.booksArray.find((book) => book.id === id);
+  }
+
+  submitApplication() {    
+    console.log(`submitted`,);  
   }
 }

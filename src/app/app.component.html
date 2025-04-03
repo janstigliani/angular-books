@@ -1,3 +1,14 @@
-<h1>Guten-library</h1>
-<app-home></app-home>
-<router-outlet />
+<main>
+    <h1>Guten-library</h1>
+    <a [routerLink]="['/']">
+        <header>
+            <h1>Gutenberg Library</h1>
+            <div class="logo-container">
+                <img src="/assets/logom.png" alt="">
+            </div>
+        </header>
+    </a>
+    <section class="content">
+        <router-outlet></router-outlet>
+    </section>
+</main>
