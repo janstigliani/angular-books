@@ -1,5 +1,5 @@
 .cover-container {
-    min-height: 300px;
+    height: 300px;
 }
 
 .book-card {
@@ -29,4 +29,8 @@
     display: flex;
     align-items: center;
     margin-bottom: 1rem;
+}
+
+.book-img{
+    height: 100%;
 }

@@ -211,7 +211,15 @@ export class BookShelfingService {
   ]
 
   getAllBooks() {
-    return this.booksArray;
+    const booksArrayString = localStorage.getItem("books")
+    if (booksArrayString) {
+      this.booksArray = JSON.parse(booksArrayString);
+      return this.booksArray;
+    } else {
+      const booksJson = JSON.stringify(this.booksArray); 
+      localStorage.setItem("books", booksJson);
+      return this.booksArray;
+    }
   }
 
   getBookById(id: number): Book | undefined {
@@ -223,5 +231,7 @@ export class BookShelfingService {
     const id = Math.max(...this.booksArray.map(o => o.id))+1;
     const newBook: Book = {id, title, ["image/jpeg"]: imagejpeg, summaries};
     this.booksArray.push(newBook);
+    const booksJson = JSON.stringify(this.booksArray); 
+    localStorage.setItem("books", booksJson);
   }
 }
